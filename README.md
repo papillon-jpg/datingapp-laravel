@@ -471,21 +471,16 @@ Za razliku od relacijskih baza (MySQL/PostgreSQL), migracija na MongoDB **nije s
     composer require jenssegers/mongodb   # ili mongodb/laravel-mongodb (novija verzija)
     ```
 
-Konfiguracija .envenvDB_CONNECTION=mongodb
+Konfiguracija .env
+
+```bash
+DB_CONNECTION=mongodb
 DB_HOST=127.0.0.1
 DB_PORT=27017
 DB_DATABASE=dating
-Dodaj konekciju u config/database.phpPHP'mongodb' => [
-'driver' => 'mongodb',
-'host' => env('DB_HOST', '127.0.0.1'),
-'port' => env('DB_PORT', 27017),
-'database' => env('DB_DATABASE'),
-'username' => env('DB_USERNAME'),
-'password' => env('DB_PASSWORD'),
-'options' => ['database' => 'admin'],
-],
-Promjena modela (primjer za Profil)PHPuse Jenssegers\Mongodb\Eloquent\Model; // ili MongoDB\Laravel\Eloquent\Model
+```
 
+```bash
 class Profil extends Model
 {
 protected $connection = 'mongodb';
@@ -500,7 +495,13 @@ protected $connection = 'mongodb';
         'slike' => 'array',
     ];
 
-}Primjer dokumenta u MongoDB:JSON{
+}
+```
+
+Primjer dokumenta u MongoDB:
+
+```bash
+JSON{
 "\_id": "65ab123...",
 "user_id": "65aa456...",
 "ime": "Sajra",
@@ -516,8 +517,22 @@ protected $connection = 'mongodb';
 "min_godine": 20,
 "max_godine": 30
 }
+```
 
-Prilagodba logike (primjeri)
-Galerija slika → slike su embedovane u profil → brisanje slike = $profil->pull('slike', ['path' => $path]); $profil->save();
-Like / Dislike → ostaju u posebnim kolekcijama (nema FK-a)
-Match logika → ručno provjeravaš obostrane lajkove u kodu (nema JOIN-a)
+---
+
+## Zaključak
+
+Prednost:
+
+- Brže učitavanje kompletnog profila
+- Kompleksnija implementacija match sistema
+- Fleksibilnost (lako dodati nova polja)
+
+Mana:
+
+- Nema automatskog integriteta relacija
+- Manje kolekcija ako embeduješ slike
+- Teže složeni upiti bez agregacija
+
+MongoDB bi bio dobar izbor za veoma fleksibilne profile ili ako očekuješ česte promjene strukture podataka, ali za klasičan dating app sa jasnim relacijama – PostgreSQL/MySQL su jednostavniji i stabilniji.
