@@ -7,16 +7,16 @@ Aplikacija omogućava registraciju korisnika, kreiranje profila, pregled drugih 
 
 ## 📌 Osnovne funkcionalnosti
 
-✔ Registracija i prijava korisnika
-✔ Kreiranje i uređivanje profila
-✔ Upload profilne slike
-✔ Galerija slika korisnika
-✔ Pregled drugih korisnika
-✔ Like / Dislike sistem
-✔ Match sistem
-✔ Undo like/dislike
-✔ Statistika korisnika
-✔ Eksterni API (mapa lokacija korisnika)
+- ✔ Registracija i prijava korisnika
+- ✔ Kreiranje i uređivanje profila
+- ✔ Upload profilne slike
+- ✔ Galerija slika korisnika
+- ✔ Pregled drugih korisnika
+- ✔ Like / Dislike sistem
+- ✔ Match sistem
+- ✔ Undo like/dislike
+- ✔ Statistika korisnika
+- ✔ Eksterni API (mapa lokacija korisnika)
 
 ---
 
@@ -112,9 +112,9 @@ U match sekciji moguće je:
 
 Korisnici mogu:
 
-✔ upload više slika
-✔ brisati slike
-✔ pregledati galeriju drugih korisnika
+- ✔ upload više slika
+- ✔ brisati slike
+- ✔ pregledati galeriju drugih korisnika
 
 ---
 
@@ -122,11 +122,11 @@ Korisnici mogu:
 
 Dashboard prikazuje:
 
-✔ broj korisnika
-✔ procent muškaraca i žena
-✔ starosnu strukturu
-✔ prosječnu starost
-✔ najčešće gradove
+- ✔ broj korisnika
+- ✔ procent muškaraca i žena
+- ✔ starosnu strukturu
+- ✔ prosječnu starost
+- ✔ najčešće gradove
 
 ---
 
@@ -134,8 +134,8 @@ Dashboard prikazuje:
 
 Dashboard sadrži mapu koja prikazuje:
 
-✔ gradove korisnika
-✔ raspored korisnika po lokacijama
+- ✔ gradove korisnika
+- ✔ raspored korisnika po lokacijama
 
 Koristi se:
 
@@ -277,10 +277,10 @@ Laravel Jetstream Authentication
 
 Omogućeno:
 
-✔ Registracija
-✔ Login
-✔ Logout
-✔ Email verifikacija
+- ✔ Registracija
+- ✔ Login
+- ✔ Logout
+- ✔ Email verifikacija
 
 ---
 
