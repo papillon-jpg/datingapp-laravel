@@ -444,6 +444,10 @@ Kompletna kompatibilnost sa Laravelom
 Sve relacije (one-to-one, one-to-many) rade identično kao u MySQL-u.
 ```
 
+<p align="center">
+  <img src="screenshots/Screenshot_15.png" width="70%">
+</p>
+
 ---
 
 ## 🍃 Migracija na MongoDB (NoSQL pristup)
